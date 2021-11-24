@@ -8,9 +8,11 @@ This utility can help you to minimize the effort to maintain the server with spa
 
 ## Screenshots
 
-Here is an example of a CVP application whicho contains some logs (809 MB)
+Here is an example of a CVP application which contains some logs (809 MB)
 
 ![alt text](images/Example-beforeExecution.png "Before execution")
+
+Here is an example of the script execution
 
 ![alt text](images/Example-execution.png "During execution")
 
@@ -25,15 +27,15 @@ CvpZipActivityLogs requires JRE 1.5 or later, usually the JRE inside CVP VXML Se
 
 If you use eclipse
 
-clone the repository
+-clone the repository
 
-import in eclipse as "Existing Maven Projects"
+-import in eclipse as "Existing Maven Projects"
 
-right clic in the project's folder, maven update 
+-right clic in the project's folder, maven update 
 
-to build the executable jar just right clic in the folder's project: run Maven install
+-to build the executable jar just right clic in the folder's project: run Maven install
 
-in the target directory will be the executable jar: CvpZipActivityLogs-0.0.1.jar
+-in the target directory will be the executable jar: CvpZipActivityLogs-0.0.1.jar
 
 
 #### Running the script
@@ -60,22 +62,6 @@ config.cvpAppsRootPath = C:\\Cisco\\CVP\\VXMLServer\\applications\\
 #config.daysThatHaveToPassBeforeLogBecomeObsolete = Integer number that determines the amount of days that have to pass for the last entry of the log file to become 'Obsolete'
 
 config.daysThatHaveToPassBeforeLogBecomeObsolete = 15
-
-#logFile.namePattern = Regular expression pattern that will be used to match 
-#and determine log files
-logFile.namePattern = activity_log\\d{4}(-\\d{2}){5}\\.txt
-
-#logFile.logEntry.date.pattern - Regular expression pattern that will be used to match and determine the timestamp of the log entry
-
-logFile.logEntry.date.pattern = .*,((\\d{2}/){2}\\d{4} \\d{2}(:\\d{2}){2}\\.\\d{3}),.*
-
-#logFIle.logEntry.date.patternGroup - Matching group number of the above regular expression that delimits the timestamp
-
-logFile.logEntry.date.pattern.group = 1
-
-#logFIle.logEntry.dateFormat - Date Format pattern that will be used to parse back into valid dates the log entry timestamp
-
-logFile.logEntry.date.format = MM/dd/yyyy hh:mm:ss.SSS
 
 
 ## License
