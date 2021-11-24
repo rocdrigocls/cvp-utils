@@ -1,5 +1,5 @@
 # CVP Utils: CvpZipActivityLogs
-## Utility to zip activity log files of every CVP application and minimize the problem of running out of space in CVP VXML Servers
+## Utility to zip activity log files of every CVP application and minimize the problem of running out space in CVP VXML Servers
 
 CVP applications generate activity log files, depending on the number of users, nodes of the application, etc activity logs may grow quickly, after 100MB a new file is generated, if you don't do regular clean-up of these logs your server may run out of space.
 
@@ -8,10 +8,13 @@ This utility can help you to minimize the effort to maintain the server with spa
 
 ## Screenshots
 
+Here is an example of a CVP application whicho contains some logs (809 MB)
 
 ![alt text](images/Example-beforeExecution.png "Before execution")
 
 ![alt text](images/Example-execution.png "During execution")
+
+Here is an example of a CVP application which contains some logs (166 MB total)
 
 ![alt text](images/Example-afterExecution.png "After execution")
 
@@ -30,16 +33,7 @@ right clic in the project's folder, maven update
 
 to build the executable jar just right clic in the folder's project: run Maven install
 
-in the tarjet directory will be the executable jar: CvpZipActivityLogs-0.0.1.jar
-
-
-```sh
-cd 
-npm i
-node app
-```
-
-
+in the target directory will be the executable jar: CvpZipActivityLogs-0.0.1.jar
 
 
 #### Running the script
@@ -57,42 +51,32 @@ To run the script (Open cmd console from inside install folder):
 java -jar CvpZipActivityLogs-0.0.1.jar CvpZipActivityLogs.properties
 
 
-###### Configuration file: 
+###### Configuration file (main parameters): 
 
 #config.cvpAppsRootPath - The folder path on which CVP applications are stored
+
 config.cvpAppsRootPath = C:\\Cisco\\CVP\\VXMLServer\\applications\\
 
-#config.daysThatHaveToPassBeforeLogBecomeObsolete = Integer number that 
-#determines the amount of days that have to pass for the last entry of the 
-#log file to become 'Obsolete'
+#config.daysThatHaveToPassBeforeLogBecomeObsolete = Integer number that determines the amount of days that have to pass for the last entry of the log file to become 'Obsolete'
+
 config.daysThatHaveToPassBeforeLogBecomeObsolete = 15
 
 #logFile.namePattern = Regular expression pattern that will be used to match 
 #and determine log files
 logFile.namePattern = activity_log\\d{4}(-\\d{2}){5}\\.txt
 
-#logFile.logEntry.date.pattern - Regular expression pattern that will be used 
-#to match and determine the timestamp of the log entry
+#logFile.logEntry.date.pattern - Regular expression pattern that will be used to match and determine the timestamp of the log entry
+
 logFile.logEntry.date.pattern = .*,((\\d{2}/){2}\\d{4} \\d{2}(:\\d{2}){2}\\.\\d{3}),.*
 
-#logFIle.logEntry.date.patternGroup - Matching group number of the above 
-#regular expression that delimits the timestamp
+#logFIle.logEntry.date.patternGroup - Matching group number of the above regular expression that delimits the timestamp
+
 logFile.logEntry.date.pattern.group = 1
 
-#logFIle.logEntry.dateFormat - Date Format pattern that will be used to parse 
-#back into valid dates the log entry timestamp
+#logFIle.logEntry.dateFormat - Date Format pattern that will be used to parse back into valid dates the log entry timestamp
+
 logFile.logEntry.date.format = MM/dd/yyyy hh:mm:ss.SSS
 
-
-```sh
-gulp build --prod
-```
-
-Generating pre-built zip archives for distribution:
-
-```sh
-gulp build dist --prod
-```
 
 ## License
 
