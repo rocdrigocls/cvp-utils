@@ -27,46 +27,45 @@ CvpZipActivityLogs requires JRE 1.5 or later, usually the JRE inside CVP VXML Se
 
 If you use maven
 
--mvn install
+```
+clone the repository
+mvn install
+```
 
 If you use eclipse
 
--clone the repository
-
--import in eclipse as "Existing Maven Projects"
-
--right clic in the project's folder, maven update 
-
--to build the executable jar just right clic in the folder's project: run Maven install
-
--in the target directory will be the executable jar: CvpZipActivityLogs-0.0.1.jar
-
+```
+clone the repository
+import in eclipse as "Existing Maven Projects"
+right clic in the project's folder, maven update 
+to build the executable jar just right clic in the folder's project: run Maven install
+in the target directory will be the executable jar: CvpZipActivityLogs-0.0.1.jar
+```
 
 #### Running the script
 
 Inside the install directory there are the required files to run the script:
 
--Executable jar: CvpZipActivityLogs-0.0.1.jar (if you wish you can build it by importing the source code)
+-**Executable jar:** CvpZipActivityLogs-0.0.1.jar (if you wish you can build it by importing the source code)
 
--Library folder: Folder with the log4j jar needed to run
+-**Library folder:** Folder with the log4j jar needed to run
 
--Configuration file: File with parameters needed to locate the CVP applications folder
+-**Configuration file:** File with parameters needed to locate the CVP applications folder
 
 To run the script (Open cmd console from inside install folder):
 
+```bash
 java -jar CvpZipActivityLogs-0.0.1.jar CvpZipActivityLogs.properties
-
+```
 
 ###### Configuration file (main parameters): 
-
+```bash
 #config.cvpAppsRootPath - The folder path on which CVP applications are stored
-
 config.cvpAppsRootPath = C:\\Cisco\\CVP\\VXMLServer\\applications\\
 
 #config.daysThatHaveToPassBeforeLogBecomeObsolete = Integer number that determines the amount of days that have to pass for the last entry of the log file to become 'Obsolete'
-
 config.daysThatHaveToPassBeforeLogBecomeObsolete = 15
-
+```
 
 ## License
 
