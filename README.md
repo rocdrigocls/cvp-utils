@@ -25,6 +25,10 @@ After the execution of the script each of the files that meet the condition of t
 
 CvpZipActivityLogs requires JRE 1.5 or later, usually the JRE inside CVP VXML Server
 
+If you use maven
+
+-mvn package
+
 If you use eclipse
 
 -clone the repository
