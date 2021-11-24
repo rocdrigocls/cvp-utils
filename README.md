@@ -1,8 +1,9 @@
 # CVP Utils: CvpZipActivityLogs
 ## Utility to zip activity log files of every CVP application and minimize the problem of running out of space in CVP VXML Servers
 
+CVP applications generate activity log files, depending on the number of users, nodes of the application, etc activity logs may grow quickly, after 100MB a new file is generated, if you don't do regular clean-up of these logs your server may run out of space.
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
+This utility can help you to minimize the effort to maintain the server with space, you can set an automated task for example to run daily at 4 am to do the clean-up of all the applications running in your server, the script creates a zip file of each file (a file with 100MB  becomes a new one with < 9MB after compressing),  in case you need to open an old log file just unzip the file.
 
 
 ## Features
@@ -11,9 +12,9 @@ Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
 
 ![alt text](images/Example-beforeExecution.png "Before execution")
 
-![alt text](images/Example-execution.png "Before execution")
+![alt text](images/Example-execution.png "During execution")
 
-![alt text](images/Example-afterExecution.png "Before execution")
+![alt text](images/Example-afterExecution.png "After execution")
 
 
 ## Tech
