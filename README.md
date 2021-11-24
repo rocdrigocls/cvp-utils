@@ -27,7 +27,7 @@ CvpZipActivityLogs requires JRE 1.5 or later, usually the JRE inside CVP VXML Se
 
 If you use maven
 
--mvn package
+-mvn install
 
 If you use eclipse
 
