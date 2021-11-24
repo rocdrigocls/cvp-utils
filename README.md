@@ -1,7 +1,7 @@
 # CVP Utils: CvpZipActivityLogs
 ## Utility to zip activity log files of every CVP application and minimize the problem of running out space in CVP VXML Servers
 
-CVP applications generate activity log files, depending on the number of users, nodes of the application, etc activity logs may grow quickly, after 100MB a new file is generated, if you don't do regular clean-up of these logs your server may run out of space.
+CVP applications generate activity log files, depending on the number of users, nodes of the application, etc. the activity logs may grow quickly, after 100MB a new file is generated, if you don't do regular clean-up of these logs your server may run out space.
 
 This utility can help you to minimize the effort to maintain the server with space, you can set an automated task for example to run daily at 4 am to do the clean-up of all the applications running in your server, the script creates a zip file of each file (a file with 100MB  becomes a new one with < 9MB after compressing),  in case you need to open an old log file just unzip the file.
 
@@ -42,11 +42,11 @@ If you use eclipse
 
 Inside the install directory there are the required files to run the script:
 
-Executable jar. CvpZipActivityLogs-0.0.1.jar (if you wish you can build it by importing the source code)
+-Executable jar: CvpZipActivityLogs-0.0.1.jar (if you wish you can build it by importing the source code)
 
-Library folder. Folder with the log4j jar needed to run
+-Library folder: Folder with the log4j jar needed to run
 
-Configuration file. File with parameters needed to locate the CVP applications folder
+-Configuration file: File with parameters needed to locate the CVP applications folder
 
 To run the script (Open cmd console from inside install folder):
 
