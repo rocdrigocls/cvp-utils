@@ -16,7 +16,7 @@ Here is an example of the script execution
 
 ![alt text](images/Example-execution.png "During execution")
 
-Here is an example of a CVP application which contains some logs (166 MB total)
+After the execution of the script each of the files that meet the condition of the configuration file (example of 15 days back) is compressed  from 100 MB to < 9 MB
 
 ![alt text](images/Example-afterExecution.png "After execution")
 
