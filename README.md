@@ -39,18 +39,22 @@ If you use eclipse
 
 ```
 git clone https://github.com/rocdrigocls/cvp-utils.git
-import in eclipse as "Existing Maven Projects"
-right clic in the project's folder, maven update 
-to build the executable jar just right clic in the folder's project: run Maven install
+
+Import in eclipse as "Existing Maven Projects"
+
+Right click in the project's folder, maven update 
+
+Build the executable jar, right click in the folder's project: run Maven install
+
 in the target directory will be the executable jar: CvpZipActivityLogs-0.0.1.jar
 ```
-![alt text](images/eclipse-import-maven-project.PNG "Import as Existing Maven Project")
+![alt text](images/eclipse-import-maven-project.png "Import as Existing Maven Project")
 
 ![alt text](images/eclipse-import-maven-project-2.PNG "Select directory")
 
 ![alt text](images/eclipse-import-maven-project-3.PNG "Project is imported in eclipse")
 
-![alt text](eclipse-import-maven-project-3b.PNG "Maven - Update Project")
+![alt text](images/eclipse-import-maven-project-3b.PNG "Maven - Update Project")
 
 ![alt text](images/eclipse-import-maven-project-3c.PNG "Maven - Update Project")
 
