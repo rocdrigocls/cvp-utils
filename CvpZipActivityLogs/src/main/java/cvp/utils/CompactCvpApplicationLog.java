@@ -32,7 +32,7 @@ public class CompactCvpApplicationLog {
 			.getLogger(CompactCvpApplicationLog.class);
 
 	private static final DateFormat isoFormat = new SimpleDateFormat(
-			"yyyy-MM-dd hh:mm:ss.SSS");
+			"yyyy-MM-dd HH:mm:ss.SSS");
 
 	private static void initFromArgs(String... args) {
 		if (args.length < 1) {
