@@ -62,7 +62,7 @@ in the target directory will be the executable jar: CvpZipActivityLogs-0.0.1.jar
 
 ![alt text](images/eclipse-import-maven-project-3e.PNG "Confirmation the Build success")
 
-#### Running the script
+## Running the script from command line
 
 Inside the install directory there are the required files to run the script:
 
@@ -86,6 +86,37 @@ config.cvpAppsRootPath = C:\\Cisco\\CVP\\VXMLServer\\applications\\
 #config.daysThatHaveToPassBeforeLogBecomeObsolete = Integer number that determines the amount of days that have to pass for the last entry of the log file to become 'Obsolete'
 config.daysThatHaveToPassBeforeLogBecomeObsolete = 15
 ```
+
+## Configuring as scheduled task
+
+-Copy the install folder with the required files to the VXML Server
+![alt text](images/InstallFolder-a.PNG "Copy the install folder with the required files to the VXML Server")
+
+-Create a new task using Task Scheduler in order to run the script automatically every day at specific time 
+![alt text](images/TaskScheduler-01.PNG "Create a new task using Task Scheduler in order to run the script automatically every day at specific time ")
+
+-Set a name for the Task in General tab
+![alt text](images/TaskScheduler-02.PNG "Set a name for the Task in General tab")
+
+-Create a new action for the Task in Actions tab
+![alt text](images/TaskScheduler-03.PNG "Create a new action for the Task in Actions tab")
+
+-Select the batch file Start_CvpZipActivityLogs.bat located inside the install folder
+![alt text](images/Start_CvpZipActivityLogs_bat_01.PNG "Select the batch file Start_CvpZipActivityLogs.bat located inside the install folder")
+![alt text](images/TaskScheduler-04.PNG "Select the batch file Start_CvpZipActivityLogs.bat located inside the install folder")
+![alt text](images/TaskScheduler-05.PNG "Select the batch file Start_CvpZipActivityLogs.bat located inside the install folder")
+
+-Define a time trigger in the Triggers tab
+![alt text](images/TaskScheduler-AddTrigger01.PNG "Define a time trigger in the Triggers tab")
+![alt text](images/TaskScheduler-AddTrigger02.PNG "Define a time trigger in the Triggers tab")
+![alt text](images/TaskScheduler-AddTrigger03.PNG "Define a time trigger in the Triggers tab")
+
+-Confirm the creation of the task
+![alt text](images/TaskScheduler-ViewDetails.PNG "Confirm the creation of the task")
+
+-Verify the log file after the execution of the task
+![alt text](images/TaskScheduler-AfterRunning01.PNG "Verify the log file after the execution of the task")
+
 
 ## License
 
